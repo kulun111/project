@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
         <module name="gateway" />
+        <module name="movies" />
         <module name="project" />
         <module name="eureka" />
       </profile>
@@ -16,6 +17,7 @@
       <module name="common" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="gateway" target="1.8" />
+      <module name="movies" target="1.8" />
       <module name="project" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="movies" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="project" options="-parameters" />
     </option>
