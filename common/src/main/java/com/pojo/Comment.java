@@ -4,13 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.io.Serializable;
 
+/**
+ * @BelongsProject: project
+ * @BelongsPackage: com.pojo
+ * @Author: 库伦
+ * @CreateTime: 2020-06-09 11:43
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Comment {
-
+public class Comment implements Serializable,Cloneable{
+    /** com_id */
     private Integer comId ;
     /** user_id */
     private Integer userId ;
@@ -25,7 +31,7 @@ public class Comment {
     /** 乐观锁 */
     private Integer revision ;
     /** 创建时间 */
-    private Date createdTime ;
+    private String createdTime ;
     /** 更新时间 */
-    private Date updatedTime ;
+    private String updatedTime ;
 }

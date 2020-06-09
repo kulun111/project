@@ -13,4 +13,9 @@ public interface Key {
         Integer FAIL=50000;
     }
 
+    interface RsaPath{
+        String PRIVATE = "D:\\rsa\\rsa.pri";
+        String PUBLIC = "D:\\rsa\\rsa.pub";
+    }
+
 }
