@@ -34,7 +34,7 @@ public class MoviesController {
 
         //调用业务层方法
         MovieDetailVo movieInfo = movieService.getMovieInfo(movie);
-        return new MyRsp().successData(movieInfo);
+        return MyRsp.successData(movieInfo);
     }
 
 
@@ -42,7 +42,12 @@ public class MoviesController {
     public MyRsp getMovieType(@RequestBody MyParam<Movies> m){
         Movies movie = m.getT();
         String movieType = movieTypeService.getMovieType(movie);
-        return new MyRsp().successData(movieType);
+        return MyRsp.successData(movieType);
 
+    }
+
+    @RequestMapping("/getMovieList")
+    public MyRsp getMovieList(@RequestBody MyParam<Movies> myParam){
+        return MyRsp.successData(myParam.getT());
     }
 }
