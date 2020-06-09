@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wn.mapper.MovieTypeMapper">
+    <select id="getMovieType" resultType="java.lang.String">
+        SELECT * from movies_type where type_id in(
+        select type_id from movies where  movieid = #{movieid}
+        )
+    </select>
+
+</mapper>
