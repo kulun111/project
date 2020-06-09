@@ -68,4 +68,10 @@ public class Users implements Serializable,Cloneable {
      * status;状态
      */
     private Integer status;
+
+    public Users(Integer userId, String name, int role) {
+        this.userId = userId;
+        this.name = name;
+        this.role = role;
+    }
 }
